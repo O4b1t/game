@@ -2,8 +2,10 @@ import java.util.ArrayList;
 
 public class Human extends Player {
     // Human class is a subclass of Player class
-    // Human class has a name, a strat made of String, and a money amount and an arraylist of property he owns
-    // Human class has a constructor that takes in a name, a strat, and a money amount
+    // Human class has a name, a strat made of String, and a money amount and an
+    // arraylist of property he owns
+    // Human class has a constructor that takes in a name, a strat, and a money
+    // amount
     // Human class has a method to get the name
     // Human class has a method to get the strat
     // Human class has a method to get the money
@@ -11,7 +13,7 @@ public class Human extends Player {
     // Human class has a method to set the money
     // Human class has a method to add a property
     // Human class has a method to remove a property
-    
+
     public Human(String name, String strat, int money) {
         super(name, strat, money);
     }
@@ -44,5 +46,4 @@ public class Human extends Player {
         super.removeProperty(property);
     }
 
-    
 }

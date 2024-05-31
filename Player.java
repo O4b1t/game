@@ -7,12 +7,14 @@ public class Player {
     private String strat;
     private int money;
     private ArrayList<Property> properties;
+    private int position;
     // Constructor for Player class
     public Player(String name, String strat, int money) {
         this.name = name;
         this.strat = strat;
         this.money = money;
         this.properties = new ArrayList<Property>();
+        this.position = 0;
     }
     // Getter for name
     public String getName() {
@@ -40,6 +42,21 @@ public class Player {
     }
     public void removeProperty(Property property) {
         properties.remove(property);
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public void move(int spaces) {
+        position += spaces;
+        if (position >= 40) {
+            position -= 40;
+        }
     }
     
 

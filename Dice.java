@@ -11,6 +11,14 @@ public class Dice {
     private boolean doubles;
 
     public Dice() {
+        
+
+        
+    }
+
+    public int roll(){
+        total = 0;
+        doubles = false;
         die1 = (int) (Math.random() * 6) + 1;
         die2 = (int) (Math.random() * 6) + 1;
         total = die1 + die2;
@@ -24,6 +32,11 @@ public class Dice {
             die1 = (int) (Math.random() * 6) + 1;
             die2 = (int) (Math.random() * 6) + 1;
             total = die1 + die2;
+            if (die1 == die2) {
+                doubles = true;
+            } else {
+                doubles = false;
+            }
         }
         //reroll a max of two times
         if (doubles) {
@@ -31,14 +44,7 @@ public class Dice {
             die2 = (int) (Math.random() * 6) + 1;
             total = die1 + die2;
         }
-
-        //go to jail if doubles rolled three times
-        if (doubles) {
-            //go to jail
-
-        }
-
-
+        return total;
     }
 
     public int getTotal() {
