@@ -1,4 +1,4 @@
-public class Property {
+public class Property extends Tiles {
     // the property class has a name, a cost, a rent fee, and a morgage fee
     // the property class has a owner
 
