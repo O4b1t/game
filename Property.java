@@ -2,28 +2,25 @@ public class Property extends Tiles {
     // the property class has a name, a cost, a rent fee, and a morgage fee
     // the property class has a owner
 
-    private String name;
     private int cost;
     private int rentFee;
     private int mortgageFee;
-    private Player owner;
-    //the property class has a 
+    // Remove the duplicate declaration of the owner field
     public Property(String name, int cost, int rentFee, int mortgageFee) {
-        this.name = name;
+        super(name); // Explicitly invoke the constructor of the superclass Tiles
         this.cost = cost;
         this.rentFee = rentFee;
         this.mortgageFee = mortgageFee;
     }
     //the property class has methods to get the name, cost, rent fee, and mortgage fee, and to set the rent fee
-    public String getName() {
-        return name;
-    }
     public int getCost() {
         return cost;
     }
     public int getRentFee() {
         return rentFee;
     }
+    private Player owner; // Declare the owner variable
+
     public int getMortgageFee() {
         return mortgageFee;
     }
